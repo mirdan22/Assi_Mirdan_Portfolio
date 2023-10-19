@@ -7,3 +7,83 @@
 .projects:hover {
     transform: scale(1.05);
 }
+
+#projects {
+	height: 824px;
+	margin-bottom: 10px;
+}
+.product1 {
+	height: 390px;
+	margin-left: 20px;
+	margin-right: 20px;
+	grid-row: 2/2;
+}
+.product2 {
+	height: 390px;
+	margin-left: 20px;
+	margin-right: 20px;
+	grid-row: 2/2;
+}
+#demo_reel {
+	height: 400px;
+	background-color: $background-color_2;
+	margin-bottom: 8px;
+}
+
+@media screen and (min-width: 768px) {
+
+.demo_reel {
+	height: 17px;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 15px;
+	margin-bottom: 0;
+}
+
+#projects {
+    height: 423px;
+    margin-bottom: 10px;
+}
+
+.demo {
+    height: 350px;
+    margin-left: 20px;
+    margin-right: 20px;
+    grid-column: 2/12;
+}
+.product2 {
+    height: 250px;
+    grid-row: 3/4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#demo_reel {
+    height: 478px;
+    background-color: $background-color_2;
+    position: relative;
+}}
+
+@media screen and (min-width: 1200px) {
+
+	#projects {
+		height: 600px;
+	}
+	.product1 {
+		height: 390px;
+		margin-left: 20px;
+		margin-right: 20px;
+		grid-row: 3/4;
+	}
+	.product2 {
+		height: 390px;
+		grid-row: 3/4;
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+	#demo_reel {
+		height: 500px;
+		background-color: $background-color_2;
+		position: relative;
+	}
+}

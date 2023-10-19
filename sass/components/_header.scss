@@ -1,1 +1,54 @@
 @use '../abstracts' as a;
+@forward 'main.css';
+.hero {
+	background-color: $background-color_1;
+	height: 442px;
+	margin-bottom: 10px;
+}
+.hero-text {
+	grid-column: 2/4;
+	height: 150px;
+	width: 150px;
+	margin-top: 148px;
+}
+#sign-up {
+	display: none;
+}
+
+@media screen and (min-width: 768px) {
+	#main-logo {
+		background-color: $background-color_4;
+		order: -1;
+	}
+	.hero {
+		background-color: $background-color_1;
+	}
+	.hero-text {
+		text-align: center;
+		width: 200px;
+		grid-column: 5/9;
+		margin-top: 100px;
+		height: 200px;
+	}}
+
+    @media screen and (min-width: 1200px) {
+        #sign-up {
+            display: block;
+        }
+        #main-logo {
+            background-color: $background-color_4;
+            order: -1;
+        }
+        #main_menu {
+            grid-row: 1/2;
+        }
+        .hero {
+            width: 1920px;
+            background-color: $background-color_1;
+        }
+        .hero-text {
+            grid-column: 1/5;
+            margin-top: 100px;
+            height: 200px;
+        }}
+    
