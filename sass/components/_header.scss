@@ -1,5 +1,6 @@
 @use '../abstracts' as a;
 @forward 'main.css';
+
 .hero {
 	background-color: $background-color_1;
 	height: 442px;
