@@ -1,92 +1,116 @@
 @use '../abstracts' as a;
 @forward 'main.css';
-#footer {
-	height: 262px;
-	background-color: $background-color_3;
-}
-#footer-logo {
-	height: 80px;
-	background-color: $background-color_4;
-	margin-left: 13px;
-	padding-right: 38px;
-}
-#footer-nav {
-	height: 100px;
-	margin-left: 12px;
-	padding-right: 35px;
-}
-#contact {
-	height: 1px;
-	padding-left: 48px;
-}
-#footer-menu {
-	height: 1px;
-	margin-left: 8px;
-	margin-right: 8px;
-}
-#inc {
-	height: 19px;
-	margin-left: 8px;
-	margin-right: 60px;
-}
-#button-box {
-	background-color: $background-color_4;
-}
-#img-box {
-	background-color: $background-color_5;}
 
+footer {
+    background-color: $primary-color;
+    color: $heading-color;
+    text-align: center;
+    padding: 100px;
+    position: relative;
+}
+    .footer-icons {
+      a {
+        color: $heading-color;
+        font-size: 24px;
+        margin: 0 10px;
+      }
+  
+      text-align: right;
+      margin-top: 20px;
+    }
+  
+    .footer-logo {
+      img {
+        margin-bottom: 20px;
+        width: 60px;
+      }
+    }
+  
+    .footer-center {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+  
+      p,
+      a {
+        color: $heading-color;
+        margin: 25px 0;
+      }
+  
+      a {
+        display: none;
+        color: $heading-color;
+        margin: 5px 0;
+      }
+    }
+  
     @media screen and (min-width: 768px) {
-    
-    /*6.Footer*/
-    #footer {
-        height: 167px;
-        background-color: #989898;
+      .footer-icons {
+        a {
+          color: $heading-color;
+          font-size: 24px;
+          margin: 0 10px;
+        }
+  
+        text-align: right;
+        margin-top: 20px;
+      }
     }
-    
-    #footer-logo {
-        height: 1px;
-        background-color: rgb(29, 28, 28);
-        margin-left: 56px;
-        padding-left:20px ;
-        padding-right: 38px;
-        margin-top: 30px;
+  
+    @media (min-width: 1024px) {
+      .footer-center, a:hover {
+        transition: 0.3s ease-in-out;
+        color: $secondary-color;
+      }
+  
+      .footer-icons a:hover {
+        transform: scale(1.10);
+        transition: 0.3s ease-in-out;
+        color: $secondary-color;
+      }
+  
+      footer {
+        background-color: $primary-color;
+        color: $heading-color;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+      }
+  
+      .footer-logo img {
+        width: 60px;
+      }
+  
+      .footer-center {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+  
+        p, a {
+          color: $heading-color;
+          margin: 5px 0;
+        }
+      }
+  
+      .footer-icons {
+        margin-top: 20px;
+  
+        a {
+          color: $heading-color;
+          font-size: 24px;
+          margin: 0 10px;
+        }
+  
+        .footer-center a {
+          display: block;
+          color: $heading-color;
+          margin: 5px 0;
+        }
+      }
     }
-    
-    
-    #contact {
-        padding-top: 6px;
-        margin-top: 12px;
-        margin-right: 30px;
-        padding-right:80px;
-        height: 1px;
-        margin-left: 150px;
-        padding-left: 48px;
-        margin-top: 29px;
-    }
-    
-    #footer-menu {
-        height: 19px;
-        margin-top: 80px;
-        grid-row: 1/2;
-        padding-bottom: 22px;
-        padding-top: 6px;
-        margin-left: -110px;
-        margin-right: 7px;
-    }
-    
-    #inc {
-        height: 19px;
-        grid-row: 1/2;
-        margin-top: 110px;
-        padding-top: 6px;
-    }
-    }
-    
-   
-
-
-
-
-
-
-   
+  

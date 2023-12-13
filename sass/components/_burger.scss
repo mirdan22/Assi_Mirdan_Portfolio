@@ -1,0 +1,40 @@
+@use '../abstracts' as a;
+@forward 'main.css';
+
+.hamburger {
+	margin-left: 350px;
+	position: relative;
+	display: block;
+	cursor: pointer;
+	z-index: 100;
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
+  
+	@media screen and (min-width: 768px) {
+	  margin-left: 600px;
+	}
+  }
+  
+  .hamburger-icon {
+	height: 50px;
+	width: 100%;
+  
+	&:hover {
+	  color: $secondary-color;
+	}
+  }
+  
+  @media (min-width: 1024px) {
+	.hamburger-menu {
+	  display: none;
+	}
+  
+	.hamburger {
+	  display: none;
+	}
+  }
+
+
+
