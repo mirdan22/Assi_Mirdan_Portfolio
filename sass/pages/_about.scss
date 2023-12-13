@@ -1,0 +1,68 @@
+@use '../abstracts' as a;
+@forward 'main.css';
+
+.about-me {
+    img {
+      width: 200px;
+      height: 200px;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  }
+
+  .content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    text-align: center;
+    color: #f0f0f0;
+  }
+
+  .about-me img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-section,
+  .contact-section {
+    margin-top: 20px;
+  }
+
+  .about-me img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .skills {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        color: #007FC8;
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      h2 {
+        color: #f0f0f0;
+        margin-bottom: 40px;
+        text-align: center;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .about-me img {
+        width: 300px;
+        height: 300px;
+      }
+    
+      .about-me p {
+        text-align: center;
+      }}

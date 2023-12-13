@@ -1,89 +1,48 @@
-.projects {
-    padding: 20px;
-    box-shadow: 1px 1px 5px rgba(0,0,0,0.3);
-    transition: all .5s ease-in-out;
-}
+@use '../abstracts' as a;
+@forward 'main.css';
 
-.projects:hover {
-    transform: scale(1.05);
-}
-
-#projects {
-	height: 824px;
-	margin-bottom: 10px;
-}
-.product1 {
-	height: 390px;
-	margin-left: 20px;
-	margin-right: 20px;
-	grid-row: 2/2;
-}
-.product2 {
-	height: 390px;
-	margin-left: 20px;
-	margin-right: 20px;
-	grid-row: 2/2;
-}
-#demo_reel {
-	height: 400px;
-	background-color: $background-color_2;
-	margin-bottom: 8px;
-}
-
-@media screen and (min-width: 768px) {
-
-.demo_reel {
-	height: 17px;
-	margin-left: 20px;
-	margin-right: 20px;
-	margin-top: 15px;
-	margin-bottom: 0;
-}
-
-#projects {
-    height: 423px;
-    margin-bottom: 10px;
-}
-
-.demo {
-    height: 350px;
-    margin-left: 20px;
-    margin-right: 20px;
-    grid-column: 2/12;
-}
-.product2 {
-    height: 250px;
-    grid-row: 3/4;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-#demo_reel {
-    height: 478px;
-    background-color: $background-color_2;
-    position: relative;
-}}
-
-@media screen and (min-width: 1200px) {
-
-	#projects {
-		height: 600px;
+.Portfolio {
+    h2 {
+      text-align: center;
+      color: #f0f0f0;
+    }
+  
+    .projects {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 20px;
+  
+      h2 {
+        text-align: center;
+      }
+  
+      .project {
+        position: relative;
+        overflow: hidden;
+        background-color: #f0f0f0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+  
+        img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+        }
+  
+        .project-info {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          text-align: center;
+          padding: 200px;
+          opacity: 0;
+          transition: opacity 0.3s ease-in-out;
+        }
 	}
-	.product1 {
-		height: 390px;
-		margin-left: 20px;
-		margin-right: 20px;
-		grid-row: 3/4;
 	}
-	.product2 {
-		height: 390px;
-		grid-row: 3/4;
-		margin-left: 20px;
-		margin-right: 20px;
 	}
-	#demo_reel {
-		height: 500px;
-		background-color: $background-color_2;
-		position: relative;
-	}
-}

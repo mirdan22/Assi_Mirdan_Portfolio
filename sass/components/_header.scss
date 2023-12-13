@@ -1,55 +1,146 @@
 @use '../abstracts' as a;
 @forward 'main.css';
 
-.hero {
-	background-color: $background-color_1;
-	height: 442px;
-	margin-bottom: 10px;
-}
-.hero-text {
-	grid-column: 2/4;
-	height: 150px;
-	width: 150px;
-	margin-top: 148px;
-}
-#sign-up {
-	display: none;
-}
-
-@media screen and (min-width: 768px) {
-	#main-logo {
-		background-color: $background-color_4;
-		order: -1;
+header {
+	position: sticky;
+	background-color: $primary-color;
+	color: white;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  
+	.header-logo {
+	  img {
+		width: 60px;
+	  }
 	}
-	.hero {
-		background-color: $background-color_1;
+  
+	.main-header {
+	  position: sticky;
+	  top: 0;
+	  display: flex;
+	  justify-content: space-between;
+	  padding: 0;
+	  z-index: 1000;
 	}
-	.hero-text {
+  
+	.header-nav {
+	  ul {
+		display: none;
+		list-style: none;
+		gap: 20px;
+  
+		&.active {
+		  display: flex;
+		}
+  
+		li {
+		  margin: 10px 0;
+		  text-align: center;
+		}
+	  }
+	}
+  
+	@media screen and (min-width: 768px) {
+	  .header-social {
+		display: none;
+	  }
+  
+	  header {
+		padding: 20px;
+	  }
+  
+	  .header-logo {
+		img {
+		  width: 70px;
+		}
+	  }
+  
+	  .header-nav ul {
+		display: none;
+		list-style: none;
+		gap: 20px;
+	  }
+	}
+  
+	@media (min-width: 1024px) {
+	  .main-header {
+		position: sticky;
+		top: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0;
+		z-index: 1000;
+	  }
+  
+	  .nav-list {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		margin: 0;
+  
+		li {
+		  margin: 0 15px;
+		}
+  
+		a {
+		  text-decoration: none;
+		  color: $secondary-color;
+		  font-weight: bold;
+		  font-size: 1.2rem;
+		  transition: color 0.3s ease-in-out;
+  
+		  &:hover {
+			color: $secondary-color;
+		  }
+		}
+	  }
+  
+	  .hero {
+		padding: 150px 20px;
+	  }
+  
+	  .header-nav a {
 		text-align: center;
-		width: 200px;
-		grid-column: 5/9;
-		margin-top: 100px;
-		height: 200px;
-	}}
-
-    @media screen and (min-width: 1200px) {
-        #sign-up {
-            display: block;
-        }
-        #main-logo {
-            background-color: $background-color_4;
-            order: -1;
-        }
-        #main_menu {
-            grid-row: 1/2;
-        }
-        .hero {
-            width: 1920px;
-            background-color: $background-color_1;
-        }
-        .hero-text {
-            grid-column: 1/5;
-            margin-top: 100px;
-            height: 200px;
-        }}
-    
+		padding: 20px;
+		position: sticky;
+		display: flex;
+		text-decoration: none;
+		color: $secondary-color;
+		font-weight: bold;
+		font-size: 16px;
+		transition: color 0.3s ease-in-out;
+  
+		&:hover {
+		  transform: scale(1.10);
+		  transition: 0.3s ease-in-out;
+		  color: $secondary-color;
+		}
+	  }
+  
+	  .header-nav ul {
+		margin-right: 190px;
+		text-align: center;
+		display: flex;
+	  }
+  
+	  .header-social {
+		gap: 15px;
+		display: flex;
+		color: $secondary-color;
+		font-size: 24px;
+		margin: 0 10px;
+	  }
+	}
+  
+	.header-social {
+	  display: flex;
+	  gap: 15px;
+	  color: $secondary-color;
+	  font-size: 24px;
+	  margin: 0 10px;
+	}
+  }
+  
