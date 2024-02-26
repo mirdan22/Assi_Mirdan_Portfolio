@@ -22,12 +22,10 @@ $stmt = null;
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yu%20Gothic%20UI:wght@600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=F37BellaStencil:wght@400&display=swap">
 
-    <script defer src="js/burger.js"></script>
-    <script async type="module" src="js/projects.js"></script>
-    <script defer src="js/video.js"></script>
+ 
     <script async src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
     <script async src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
-    <script defer src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
@@ -74,13 +72,10 @@ $stmt = null;
 
         <header>
        
-            <!-- <img class="project-img1" alt="Image 1" src="./images/car-project1.png"> -->
+     
        
             <div class="project-text">
-                <!-- <h2>Cars 4 Sale</h2>
-                <p>My Role: designing, Coding, Research, Photoshoot</p>
-                <p>Industry: UX/UI, HTML, CSS, JS</p>
-                <p>Project Type: Buying used cars website</p> -->
+          
                 <h2><?php echo $row['title']; ?></h2>
                 
 <p><?php echo $row['my_role']; ?></p>
@@ -99,19 +94,16 @@ $stmt = null;
 
 
         <div>
-            <section class="projects">
+            <section class="projects-media">
                 <h2 hidden>project imags</h2>
                 <?php 
 for($i =0; $i < count($images); $i++) {
 
-echo '<img class="projects" src="images/'.$images[$i].'" alt="Project Image">';
+echo '<img class="projects-media" src="images/'.$images[$i].'" alt="Project Image">';
 
 }
 ?>
-                <!-- <img class="project-img" alt="Image 1" src="./images/car-web-2.png">
-                <img class="project-img" alt="Image 2" src="./images/car-web-1.png">
-                <img class="project-img2" alt="Image 3" src="./images/car-web.png">
-                <img class="project-img2" alt="Image 4" src="./images/car-mobile.png"> -->
+            
 
             </section>
         </div>
@@ -121,7 +113,7 @@ echo '<img class="projects" src="images/'.$images[$i].'" alt="Project Image">';
         <section class="comment-contact">
             <h2 hidden>Comment / Contact</h2>
             <p>Comment / Contact about this project</p>
-            <button onclick="location.href='index.html'" class="comment-btn" id="comment">
+            <button onclick="location.href='index.php'" class="comment-btn" id="comment">
                 <span>Contact</span>
             </button>
         </section>
@@ -134,7 +126,7 @@ echo '<img class="projects" src="images/'.$images[$i].'" alt="Project Image">';
         </div>
         <div class="footer-center">
             <p><a href="#top">Back to top</a></p>
-            <p>© 2023 Mirdan Assi. All Rights Reserved.</p>
+            <p>© 2024 Mirdan Assi. All Rights Reserved.</p>
         </div>
         <div class="footer-icons">
             <a href="https://github.com/your-github-profile" target="_blank" rel="noopener noreferrer"><i
@@ -149,26 +141,6 @@ echo '<img class="projects" src="images/'.$images[$i].'" alt="Project Image">';
 
     </footer>
     <?php
-
-// while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-
-//   echo  '<section class="projects"><h3>'
-  
-// .$row['title'].'</h3><a href="project_detail.php?id='.
-
-// $row['id'].'"><img class="thumbnail" src="images/'.   
-
-// $row['image_url'].'" alt="Project Thumbnail"></a><p>'. 
-
-// $row['project_type'].'</p>'.
-
-// $row['description'].'</p></section>';
-
-// }
-
-
-
-
 
 $stmt = null;
 
