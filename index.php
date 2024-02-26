@@ -20,16 +20,10 @@ $stmt->execute();
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yu%20Gothic%20UI:wght@600&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=F37BellaStencil:wght@400&display=swap">
 
-
-    <script defer src="js/burger.js"></script>
-    <!-- <script defer src="js/contact-form.js"></script> -->
-    <script async type="module" src="js/projects.js"></script>
-    <script async type="module" src="js/smoothscroll.js"></script>
-    <!-- <script defer src="js/video.js"></script> -->
     <script async src="https://unpkg.com/gsap@3.9.0/dist/gsap.min.js"></script>
   <script async src="https://unpkg.com/gsap@3.9.0/dist/ScrollTrigger.min.js"></script>
-    <script type="module" defer src="js/main.js"></script>
-    <script defer src="js/skills.js"></script>
+  <script type="module" src="js/main.js"></script>
+
 
 </head>
 
