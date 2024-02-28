@@ -53,13 +53,6 @@ export function contact() {
                 })
         }
 
-        function hideModel() {
-            received.style.display = 'none';
-        }
-
-        form.addEventListener("submit", regForm);
-
-        receivedclose.addEventListener("click", hideModel);
 
 
     })();
